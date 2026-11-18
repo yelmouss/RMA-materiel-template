@@ -45,7 +45,7 @@
         .topline {
             background: var(--green);
             color: #edf3e9;
-            font-size: 11px;
+            font-size: 12px;
             padding: 9px 0
         }
 
@@ -91,7 +91,7 @@
             outline: 0;
             flex: 1;
             min-width: 0;
-            font-size: 13px
+            font-size: 14px
         }
 
         .search button,
@@ -100,18 +100,18 @@
             background: var(--orange);
             color: white;
             padding: 13px 20px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 800
         }
 
         .headlink {
-            font-size: 11px;
+            font-size: 12px;
             white-space: nowrap
         }
 
         .headlink b {
             display: block;
-            font-size: 14px
+            font-size: 15px
         }
 
         .iconbtn {
@@ -240,14 +240,13 @@
         }
 
         .megacol h4 {
-            font-size: 12px;
-            margin: 0 0 10px
+            display: none
         }
 
         .megacol a {
             display: block;
             color: var(--muted);
-            font-size: 12px;
+            font-size: 13px;
             padding: 6px 0
         }
 
@@ -278,7 +277,7 @@
         }
 
         .eyebrow {
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 800;
@@ -305,7 +304,7 @@
         }
 
         .sale p {
-            font-size: 14px;
+            font-size: 15px;
             color: #637064;
             max-width: 440px;
             margin: 0 0 22px
@@ -371,13 +370,13 @@
         }
 
         .subhero h2 {
-            font-size: 23px;
+            font-size: 26px;
             line-height: 1.15;
             margin: 8px 0
         }
 
         .subhero p {
-            font-size: 12px;
+            font-size: 13px;
             opacity: .8
         }
 
@@ -422,11 +421,11 @@
         }
 
         .service b {
-            font-size: 12px
+            font-size: 13px
         }
 
         .service small {
-            font-size: 10px;
+            font-size: 11px;
             color: #849087
         }
 
@@ -443,7 +442,7 @@
         }
 
         .sectionhead h2 {
-            font-size: 30px;
+            font-size: 32px;
             line-height: 1.1;
             letter-spacing: -1px;
             margin: 6px 0;
@@ -451,13 +450,13 @@
         }
 
         .subtext {
-            font-size: 12px;
+            font-size: 13px;
             color: #849087;
             margin: 8px 0 0
         }
 
         .textlink {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 800;
             border-bottom: 1px solid #8ba66e;
             padding-bottom: 5px;
@@ -765,12 +764,12 @@
         }
 
         .promo h2 {
-            font-size: 28px;
+            font-size: 30px;
             margin: 8px 0
         }
 
         .promo p {
-            font-size: 12px;
+            font-size: 13px;
             color: #d0dbd0;
             margin: 0
         }
@@ -781,20 +780,48 @@
             margin-bottom: 70px
         }
 
+        .brands h2 {
+            font-size: 32px;
+            margin: 8px 0
+        }
+
+        .brands .subtext {
+            font-size: 14px
+        }
+
         .brandrow {
             display: flex;
-            justify-content: space-between;
+            gap: 30px;
+            overflow-x: auto;
             align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 25px
+            margin-top: 25px;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: #b6d58b #f4f6f0
+        }
+
+        .brandrow::-webkit-scrollbar {
+            height: 6px
+        }
+
+        .brandrow::-webkit-scrollbar-track {
+            background: #f4f6f0
+        }
+
+        .brandrow::-webkit-scrollbar-thumb {
+            background: #b6d58b;
+            border-radius: 3px
         }
 
         .brand {
-            font-size: 18px;
+            font-size: 21px;
             font-weight: 900;
             letter-spacing: -1px;
-            color: #254631
+            color: #254631;
+            white-space: nowrap;
+            scroll-snap-align: center;
+            flex: 0 0 auto
         }
 
         .brand:nth-child(2) {
@@ -868,13 +895,13 @@
         }
 
         .aboutcopy h2 {
-            font-size: 34px;
+            font-size: 36px;
             line-height: 1.1;
             margin: 9px 0 14px
         }
 
         .aboutcopy p {
-            font-size: 13px;
+            font-size: 14px;
             color: #68766b
         }
 
@@ -885,13 +912,13 @@
         }
 
         .stats b {
-            font-size: 23px;
+            font-size: 24px;
             display: block;
             color: var(--green2)
         }
 
         .stats small {
-            font-size: 10px;
+            font-size: 11px;
             color: #718073
         }
 
@@ -911,16 +938,16 @@
         }
 
         .presta b {
-            font-size: 13px
+            font-size: 14px
         }
 
         .presta small {
-            font-size: 10px;
+            font-size: 11px;
             color: #829087
         }
 
         .presta a {
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 800;
             margin-top: 12px
         }
@@ -946,7 +973,7 @@
         }
 
         .newsbody small {
-            font-size: 9px;
+            font-size: 10px;
             color: #779a4f;
             letter-spacing: 1px
         }
@@ -1094,7 +1121,7 @@
         }
 
         .footgrid h4 {
-            font-size: 12px;
+            font-size: 13px;
             margin: 0 0 13px
         }
 
@@ -1316,11 +1343,15 @@
             }
 
             .brandrow {
-                justify-content: center
+                justify-content: flex-start;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory
             }
 
             .brand {
-                font-size: 15px
+                font-size: 16px;
+                flex: 0 0 auto;
+                scroll-snap-align: center
             }
 
             .about {
