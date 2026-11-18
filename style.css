@@ -151,8 +151,48 @@
         .nav {
             border-top: 1px solid #edf0e9;
             border-bottom: 1px solid #e7ebe3;
-            position: relative;
-            z-index: 10
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .96);
+            transition: box-shadow .35s ease, background .35s ease, border-color .35s ease
+        }
+
+        .nav::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 2px;
+            width: var(--progress, 0%);
+            background: var(--green2);
+            opacity: 0;
+            transition: opacity .3s ease
+        }
+
+        .nav.stuck {
+            background: rgba(255, 255, 255, .82);
+            backdrop-filter: blur(14px) saturate(1.4);
+            -webkit-backdrop-filter: blur(14px) saturate(1.4);
+            box-shadow: 0 10px 30px -12px #142d2029;
+            border-top-color: transparent;
+            animation: navdrop .45s cubic-bezier(.22, 1, .36, 1)
+        }
+
+        .nav.stuck::after {
+            opacity: 1
+        }
+
+        @keyframes navdrop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0
+            }
+
+            to {
+                transform: none;
+                opacity: 1
+            }
         }
 
         .navrow {
@@ -164,12 +204,17 @@
 
         .navitem {
             border: 0;
-            background: white;
+            background: transparent;
             padding: 16px 12px;
             color: #273f30;
             font-size: 12px;
             font-weight: 700;
-            white-space: nowrap
+            white-space: nowrap;
+            transition: padding .3s ease, color .2s ease
+        }
+
+        .nav.stuck .navitem {
+            padding-block: 12px
         }
 
         .navitem:hover,
@@ -990,9 +1035,30 @@
         }
 
         .social a {
-            border: 1px solid #ffffff45;
-            padding: 8px 13px;
-            font-size: 10px
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 18px;
+            transition: transform .25s ease, box-shadow .25s ease
+        }
+
+        .social a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px #0004
+        }
+
+        .social .fa-facebook-f {
+            color: #1877f2
+        }
+
+        .social .fa-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent
         }
 
         .footgrid {
