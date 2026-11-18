@@ -70,7 +70,7 @@
 
         .logo img {
             display: block;
-            width: 242px;
+            width: 280px;
             max-width: 100%;
             height: auto
         }
@@ -91,7 +91,7 @@
             outline: 0;
             flex: 1;
             min-width: 0;
-            font-size: 14px
+            font-size: 15px
         }
 
         .search button,
@@ -370,13 +370,13 @@
         }
 
         .subhero h2 {
-            font-size: 26px;
+            font-size: 28px;
             line-height: 1.15;
             margin: 8px 0
         }
 
         .subhero p {
-            font-size: 13px;
+            font-size: 14px;
             opacity: .8
         }
 
@@ -442,7 +442,7 @@
         }
 
         .sectionhead h2 {
-            font-size: 32px;
+            font-size: 34px;
             line-height: 1.1;
             letter-spacing: -1px;
             margin: 6px 0;
@@ -450,13 +450,13 @@
         }
 
         .subtext {
-            font-size: 13px;
+            font-size: 14px;
             color: #849087;
             margin: 8px 0 0
         }
 
         .textlink {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 800;
             border-bottom: 1px solid #8ba66e;
             padding-bottom: 5px;
@@ -764,12 +764,12 @@
         }
 
         .promo h2 {
-            font-size: 30px;
+            font-size: 33px;
             margin: 8px 0
         }
 
         .promo p {
-            font-size: 13px;
+            font-size: 14px;
             color: #d0dbd0;
             margin: 0
         }
@@ -777,32 +777,34 @@
         .brands {
             background: #f4f6f0;
             padding: 27px 30px;
-            margin-bottom: 70px
+            margin-bottom: 70px;
+            position: relative
         }
 
         .brands h2 {
-            font-size: 32px;
+            font-size: 35px;
             margin: 8px 0
         }
 
         .brands .subtext {
-            font-size: 14px
+            font-size: 15px
         }
 
         .brandrow {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             overflow-x: auto;
             align-items: center;
             margin-top: 25px;
             scroll-snap-type: x mandatory;
-            padding-bottom: 8px;
+            padding-bottom: 12px;
             scrollbar-width: thin;
-            scrollbar-color: #b6d58b #f4f6f0
+            scrollbar-color: #b6d58b #f4f6f0;
+            scroll-behavior: smooth
         }
 
         .brandrow::-webkit-scrollbar {
-            height: 6px
+            height: 8px
         }
 
         .brandrow::-webkit-scrollbar-track {
@@ -811,11 +813,41 @@
 
         .brandrow::-webkit-scrollbar-thumb {
             background: #b6d58b;
-            border-radius: 3px
+            border-radius: 4px
+        }
+
+        .brand-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 1px solid #e5e9df;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 14px;
+            color: var(--green2)
+        }
+
+        .brand-nav:hover {
+            background: #f4f6f0
+        }
+
+        .brand-nav.prev {
+            left: 0
+        }
+
+        .brand-nav.next {
+            right: 0
         }
 
         .brand {
-            font-size: 21px;
+            font-size: 23px;
             font-weight: 900;
             letter-spacing: -1px;
             color: #254631;
@@ -895,13 +927,13 @@
         }
 
         .aboutcopy h2 {
-            font-size: 36px;
+            font-size: 38px;
             line-height: 1.1;
             margin: 9px 0 14px
         }
 
         .aboutcopy p {
-            font-size: 14px;
+            font-size: 15px;
             color: #68766b
         }
 
@@ -1231,7 +1263,7 @@
             }
 
             .logo img {
-                width: 200px
+                width: 220px
             }
 
             .headlink {
