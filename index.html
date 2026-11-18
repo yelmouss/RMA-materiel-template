@@ -93,19 +93,19 @@
                 <a class="cat" href="https://www.rmamateriel.com/39-tondeuses"><img alt="Tondeuses"
                         src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=450&q=80">
                     <div><b>Tondeuses</b><small>Pour une pelouse impeccable</small></div>
-                </a><a class="cat" href="https://www.rmamateriel.com/63-robot-tondeuse"><img
+                </a><a class="cat" href="https://www.rmamateriel.com/63-robot-tondeuse"><img alt="Robots tondeuses"
                         src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=450&q=80">
                     <div><b>Robots tondeuses</b><small>La tonte en toute autonomie</small></div>
-                </a><a class="cat" href="https://www.rmamateriel.com/45-tronconneuses"><img
+                </a><a class="cat" href="https://www.rmamateriel.com/45-tronconneuses"><img alt="Tronçonneuses"
                         src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=450&q=80">
                     <div><b>Tronçonneuses</b><small>Puissance et précision</small></div>
-                </a><a class="cat" href="https://www.rmamateriel.com/89-materiels-a-batterie"><img
+                </a><a class="cat" href="https://www.rmamateriel.com/89-materiels-a-batterie"><img alt="Matériels à batterie"
                         src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=450&q=80">
                     <div><b>Matériels à batterie</b><small>Liberté de mouvement</small></div>
-                </a><a class="cat" href="#"><img
+                </a><a class="cat" href="https://www.rmamateriel.com/2-nos-produits"><img alt="Débroussailleuses"
                         src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=450&q=80">
                     <div><b>Débroussailleuses</b><small>Pour les terrains exigeants</small></div>
-                </a><a class="cat" href="#"><img
+                </a><a class="cat" href="https://www.rmamateriel.com/2-nos-produits"><img alt="Souffleurs"
                         src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=450&q=80">
                     <div><b>Souffleurs</b><small>Un extérieur impeccable</small></div>
                 </a>
@@ -146,11 +146,13 @@
         <section class="wrap brands"><span class="eyebrow">Nos partenaires</span>
             <h2>Les marques que nous aimons</h2>
             <p class="subtext">Des références reconnues pour leur fiabilité et leurs performances.</p>
-            <button class="brand-nav prev" id="brandPrev" aria-label="Marques précédentes"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="brandrow" id="brandrow"><span class="brand">Husqvarna</span><span class="brand">ECHO</span><span
-                    class="brand">Cub Cadet</span><span class="brand">PUBERT</span><span class="brand">ROQUES &
-                    LECOEUR</span><span class="brand">Solis</span><span class="brand">Gianni Ferrari</span><span class="brand">TIMBERWOLF</span><span class="brand">REFORM</span><span class="brand">AMAZONE</span><span class="brand">FSI</span><span class="brand">ROUSSEAU</span></div>
-            <button class="brand-nav next" id="brandNext" aria-label="Marques suivantes"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="brandwrap">
+                <button class="brand-nav prev" id="brandPrev" aria-label="Marques précédentes"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="brandrow" id="brandrow"><span class="brand">Husqvarna</span><span class="brand">ECHO</span><span
+                        class="brand">Cub Cadet</span><span class="brand">PUBERT</span><span class="brand">ROQUES &
+                        LECOEUR</span><span class="brand">Solis</span><span class="brand">Gianni Ferrari</span><span class="brand">TIMBERWOLF</span><span class="brand">REFORM</span><span class="brand">AMAZONE</span><span class="brand">FSI</span><span class="brand">ROUSSEAU</span></div>
+                <button class="brand-nav next" id="brandNext" aria-label="Marques suivantes"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </section>
         <section class="wrap about">
             <div class="aboutphoto">
@@ -313,7 +315,72 @@
             (() => {const nav = document.querySelector('.nav'), top = nav.offsetTop; let tick = false; const onScroll = () => {const y = window.scrollY; nav.classList.toggle('stuck', y > top + 4); const h = document.documentElement.scrollHeight - innerHeight; nav.style.setProperty('--progress', (h > 0 ? y / h * 100 : 0) + '%'); tick = false}; addEventListener('scroll', () => {if (!tick) {tick = true; requestAnimationFrame(onScroll)}}, {passive: true}); onScroll()})();
             const FALLBACK_IMG = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=450&q=80'; document.addEventListener('error', e => {const t = e.target; if (t.tagName === 'IMG' && t.src !== FALLBACK_IMG && !t.dataset.fb) {t.dataset.fb = 1; t.src = FALLBACK_IMG}}, true);
             (() => {const car = $('#catcarousel'), prev = document.querySelector('.carbtn.prev'), next = document.querySelector('.carbtn.next'), dots = $('#cardots'); const step = () => {const c = car.querySelector('.cat'); return c.offsetWidth + 14}; const pages = () => Math.max(1, Math.ceil((car.scrollWidth - car.clientWidth) / step()) + 1); const cur = () => Math.round(car.scrollLeft / step()); let timer; const buildDots = () => {dots.innerHTML = Array.from({length: pages()}, (_, i) => `<button aria-label="Diapo ${i + 1}" data-i="${i}"></button>`).join(''); update()}; const update = () => {const max = car.scrollWidth - car.clientWidth; prev.disabled = car.scrollLeft <= 2; next.disabled = car.scrollLeft >= max - 2; dots.querySelectorAll('button').forEach((d, i) => d.classList.toggle('on', i === Math.min(cur(), pages() - 1)))}; const go = i => car.scrollTo({left: i * step(), behavior: 'smooth'}); prev.addEventListener('click', () => car.scrollBy({left: -step() * 2, behavior: 'smooth'})); next.addEventListener('click', () => car.scrollBy({left: step() * 2, behavior: 'smooth'})); dots.addEventListener('click', e => {const b = e.target.closest('[data-i]'); if (b) go(+b.dataset.i)}); car.addEventListener('scroll', update, {passive: true}); window.addEventListener('resize', buildDots); const auto = () => {clearInterval(timer); timer = setInterval(() => {const max = car.scrollWidth - car.clientWidth; car.scrollLeft >= max - 2 ? car.scrollTo({left: 0, behavior: 'smooth'}) : car.scrollBy({left: step(), behavior: 'smooth'})}, 4500)}; const wrap = car.parentElement; wrap.addEventListener('mouseenter', () => clearInterval(timer)); wrap.addEventListener('mouseleave', auto); wrap.addEventListener('touchstart', () => clearInterval(timer), {passive: true}); let down = false, sx = 0, sl = 0, moved = false; car.addEventListener('mousedown', e => {down = true; moved = false; sx = e.pageX; sl = car.scrollLeft}); window.addEventListener('mousemove', e => {if (!down) return; const dx = e.pageX - sx; if (Math.abs(dx) > 5) {moved = true; car.classList.add('dragging')} if (moved) car.scrollLeft = sl - dx}); window.addEventListener('mouseup', () => {if (!down) return; down = false; car.classList.remove('dragging'); if (moved) go(cur())}); car.addEventListener('dragstart', e => e.preventDefault()); buildDots(); auto()})();
-            (() => {const br = $('#brandrow'), prev = $('#brandPrev'), next = $('#brandNext'); const step = 300; const update = () => {const max = br.scrollWidth - br.clientWidth; prev.style.display = br.scrollLeft <= 2 ? 'none' : 'flex'; next.style.display = br.scrollLeft >= max - 2 ? 'none' : 'flex'}; prev.addEventListener('click', () => br.scrollBy({left: -step, behavior: 'smooth'})); next.addEventListener('click', () => br.scrollBy({left: step, behavior: 'smooth'})); br.addEventListener('scroll', update, {passive: true}); window.addEventListener('resize', update); update()})();
+            (() => {
+                const br = $('#brandrow'), prev = $('#brandPrev'), next = $('#brandNext');
+                if (!br || !prev || !next) return;
+                const step = 280;
+                const update = () => {
+                    const max = br.scrollWidth - br.clientWidth;
+                    prev.style.display = br.scrollLeft <= 4 ? 'none' : 'flex';
+                    next.style.display = br.scrollLeft >= max - 4 ? 'none' : 'flex';
+                };
+                prev.addEventListener('click', () => br.scrollBy({left: -step, behavior: 'smooth'}));
+                next.addEventListener('click', () => br.scrollBy({left: step, behavior: 'smooth'}));
+                br.addEventListener('scroll', update, {passive: true});
+                window.addEventListener('resize', update);
+
+                let isDown = false, startX = 0, scrollStart = 0, moved = false;
+                br.addEventListener('mousedown', e => {
+                    isDown = true;
+                    moved = false;
+                    startX = e.pageX;
+                    scrollStart = br.scrollLeft;
+                });
+                window.addEventListener('mousemove', e => {
+                    if (!isDown) return;
+                    const dx = e.pageX - startX;
+                    if (Math.abs(dx) > 4) {
+                        moved = true;
+                        br.classList.add('dragging');
+                    }
+                    if (moved) {
+                        br.scrollLeft = scrollStart - dx;
+                    }
+                });
+                window.addEventListener('mouseup', () => {
+                    if (!isDown) return;
+                    isDown = false;
+                    br.classList.remove('dragging');
+                });
+                br.addEventListener('mouseleave', () => {
+                    if (isDown) {
+                        isDown = false;
+                        br.classList.remove('dragging');
+                    }
+                });
+
+                let timer;
+                const auto = () => {
+                    clearInterval(timer);
+                    timer = setInterval(() => {
+                        const max = br.scrollWidth - br.clientWidth;
+                        if (max <= 10) return;
+                        if (br.scrollLeft >= max - 4) {
+                            br.scrollTo({left: 0, behavior: 'smooth'});
+                        } else {
+                            br.scrollBy({left: step, behavior: 'smooth'});
+                        }
+                    }, 4000);
+                };
+                const wrap = br.closest('.brandwrap') || br.parentElement;
+                wrap.addEventListener('mouseenter', () => clearInterval(timer));
+                wrap.addEventListener('mouseleave', auto);
+                wrap.addEventListener('touchstart', () => clearInterval(timer), {passive: true});
+                wrap.addEventListener('touchend', auto, {passive: true});
+
+                update();
+                auto();
+            })();
             const products = [['Robot tondeuse Husqvarna 305', 'ROBOT TONDEUSE', '799 €', '1 199 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse Husqvarna LB553SQe', 'TONDEUSE', '1 239 €', '1 359 €', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Tronçonneuse Husqvarna T435', 'TRONÇONNEUSE', '469 €', '529 €', 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Débroussailleuse à batterie 535iRX', 'BATTERIE', '629 €', '729 €', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Robot tondeuse Automower 405X', 'ROBOT TONDEUSE', '1 299 €', '1 999 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Souffleur à batterie', 'SOUFFLAGE', '349 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'NOUVEAU'], ['Tronçonneuse Husqvarna 120', 'TRONÇONNEUSE', '149 €', '179 €', 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse autoportée', 'TONTE', '3 490 €', '', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Taille-haies à batterie', 'BATTERIE', '289 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Robot tondeuse professionnel', 'ROBOT TONDEUSE', '2 900 €', '4 799 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse thermique', 'TONDEUSE', '579 €', '', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Accessoires de jardin', 'ACCESSOIRES', '39 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'SÉLECTION']]; let page = 1, count = 0; function render() {let list = $('#products'); list.innerHTML = products.slice((page - 1) * 8, page * 8).map(p => `<article class="product"><div class="productimg"><span class="tag">${p[5]}</span><button class="heart" aria-label="Favori"><i class="fa-regular fa-heart"></i></button><img src="${p[4]}" alt="${p[0]}"></div><div class="productinfo"><small>${p[1]}</small><b>${p[0]}</b><p>Disponible selon arrivage · Conseil en magasin</p><span class="price">${p[2]} ${p[3] ? `<del>${p[3]}</del>` : ''}</span><button class="add" data-add>AJOUTER AU PANIER +</button></div></article>`).join(''); $('#pages').innerHTML = Array.from({length: Math.ceil(products.length / 8)}, (_, i) => `<button class="${page === i + 1 ? 'sel' : ''}" data-page="${i + 1}">${i + 1}</button>`).join('') + `<button data-page="${page === Math.ceil(products.length / 8) ? 1 : page + 1}"><i class="fa-solid fa-arrow-right"></i></button>`} render(); $('#pages').addEventListener('click', e => {let b = e.target.closest('[data-page]'); if (b) {page = +b.dataset.page; render(); $('#products').scrollIntoView({behavior: 'smooth', block: 'center'})} }); $('#products').addEventListener('click', e => {if (e.target.closest('[data-add]')) {count++; $('#count').textContent = count; toast('Produit ajouté au panier (démo)')} let h = e.target.closest('.heart'); if (h) {let ic = h.querySelector('i'); ic.classList.toggle('fa-regular'); ic.classList.toggle('fa-solid'); h.style.color = '#df4c27'} }); $('#cart').addEventListener('click', () => toast('Votre panier contient ' + count + ' article(s) — démonstration')); $('#search').addEventListener('submit', e => {e.preventDefault(); toast($('#searchInput').value.trim() ? 'Recherche : ' + $('#searchInput').value : 'Saisissez un produit ou une référence')}); $('#newsletter').addEventListener('submit', e => {e.preventDefault(); toast('Merci pour votre inscription (démo)')}); document.querySelectorAll('[data-toast]').forEach(b => b.addEventListener('click', () => toast(b.dataset.toast)));
         })();
     </script>

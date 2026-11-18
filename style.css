@@ -19,7 +19,11 @@
         body {
             margin: 0;
             font-family: Inter, Arial, sans-serif;
-            color: var(--ink)
+            color: var(--ink);
+            overflow-x: hidden;
+            zoom: 1.25;
+            -moz-transform: scale(1.25);
+            -moz-transform-origin: 0 0
         }
 
         a {
@@ -395,14 +399,15 @@
             border-block: 1px solid #e5e9e1;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            padding: 22px 0
+            padding: 26px 0;
+            gap: 14px
         }
 
         .service {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 0 18px;
+            gap: 15px;
+            padding: 0 16px;
             border-right: 1px solid #e6eae2
         }
 
@@ -411,8 +416,9 @@
         }
 
         .ico {
-            font-size: 23px;
-            color: var(--green2)
+            font-size: 28px;
+            color: var(--green2);
+            flex-shrink: 0
         }
 
         .service b,
@@ -421,12 +427,17 @@
         }
 
         .service b {
-            font-size: 13px
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--green);
+            line-height: 1.25;
+            margin-bottom: 4px
         }
 
         .service small {
-            font-size: 11px;
-            color: #849087
+            font-size: 13.5px;
+            color: #55665b;
+            line-height: 1.35
         }
 
         .section {
@@ -551,11 +562,12 @@
         }
 
         .cat {
-            flex: 0 0 190px;
+            flex: 0 0 215px;
             scroll-snap-align: start;
             background: #f4f6f1;
-            min-height: 210px;
+            min-height: 235px;
             padding: 16px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -569,19 +581,27 @@
 
         .cat img {
             width: 100%;
-            height: 135px;
-            object-fit: contain
+            height: 140px;
+            object-fit: contain;
+            border-radius: 6px
+        }
+
+        .cat div {
+            padding-top: 10px
         }
 
         .cat b {
-            font-size: 13px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--green);
             display: block;
-            margin-bottom: 4px
+            margin-bottom: 5px;
+            line-height: 1.25
         }
 
         .cat small {
-            font-size: 10px;
-            color: #829087;
+            font-size: 13px;
+            color: #55665b;
             display: block;
             line-height: 1.4
         }
@@ -594,38 +614,50 @@
         .categorygrid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 13px;
-            margin-top: 14px
+            gap: 14px;
+            margin-top: 16px
         }
 
         .categorytile {
-            height: 112px;
+            min-height: 116px;
             display: flex;
             align-items: center;
             background: #f5f7f3;
-            overflow: hidden
+            border-radius: 8px;
+            overflow: hidden;
+            transition: .2s
+        }
+
+        .categorytile:hover {
+            background: #eaf0e3;
+            transform: translateY(-2px)
         }
 
         .categorytile img {
             height: 100%;
             width: 42%;
+            min-height: 116px;
             object-fit: cover
         }
 
         .categorytile div {
-            padding: 12px
+            padding: 14px 16px
         }
 
         .categorytile b {
-            font-size: 12px;
-            display: block
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--green);
+            display: block;
+            margin-bottom: 4px;
+            line-height: 1.25
         }
 
         .categorytile small {
             display: block;
-            margin-top: 3px;
-            font-size: 10px;
-            color: #7d897f
+            font-size: 13px;
+            color: #55665b;
+            line-height: 1.35
         }
 
         .products {
@@ -790,30 +822,38 @@
             font-size: 15px
         }
 
+        .brandwrap {
+            position: relative;
+            margin-top: 25px;
+            display: flex;
+            align-items: center
+        }
+
         .brandrow {
             display: flex;
-            gap: 40px;
+            gap: 42px;
             overflow-x: auto;
             align-items: center;
-            margin-top: 25px;
+            width: 100%;
             scroll-snap-type: x mandatory;
-            padding-bottom: 12px;
-            scrollbar-width: thin;
-            scrollbar-color: #b6d58b #f4f6f0;
-            scroll-behavior: smooth
+            padding: 10px 14px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+            cursor: grab;
+            user-select: none
         }
 
         .brandrow::-webkit-scrollbar {
-            height: 8px
+            display: none;
+            width: 0;
+            height: 0
         }
 
-        .brandrow::-webkit-scrollbar-track {
-            background: #f4f6f0
-        }
-
-        .brandrow::-webkit-scrollbar-thumb {
-            background: #b6d58b;
-            border-radius: 4px
+        .brandrow.dragging {
+            cursor: grabbing;
+            scroll-snap-type: none;
+            scroll-behavior: auto
         }
 
         .brand-nav {
@@ -821,9 +861,9 @@
             top: 50%;
             transform: translateY(-50%);
             background: white;
-            border: 1px solid #e5e9df;
-            width: 36px;
-            height: 36px;
+            border: 1px solid #dbe2d6;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -831,19 +871,24 @@
             cursor: pointer;
             z-index: 10;
             font-size: 14px;
-            color: var(--green2)
+            color: var(--green);
+            box-shadow: 0 4px 14px rgba(32, 63, 45, .12);
+            transition: all .2s ease
         }
 
         .brand-nav:hover {
-            background: #f4f6f0
+            background: var(--green);
+            color: #fff;
+            border-color: var(--green);
+            transform: translateY(-50%) scale(1.05)
         }
 
         .brand-nav.prev {
-            left: 0
+            left: -14px
         }
 
         .brand-nav.next {
-            right: 0
+            right: -14px
         }
 
         .brand {
