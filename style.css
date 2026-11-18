@@ -21,9 +21,7 @@
             font-family: Inter, Arial, sans-serif;
             color: var(--ink);
             overflow-x: hidden;
-            zoom: 1.25;
-            -moz-transform: scale(1.25);
-            -moz-transform-origin: 0 0
+            zoom: 1.25
         }
 
         a {
