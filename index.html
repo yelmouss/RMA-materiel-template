@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RMA Matériel — Le bon matériel, le conseil en plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="topline">
+        <div class="wrap"><span><i class="fa-solid fa-location-dot"></i> Villard Bozon · 38570 Goncelin</span><span>Magasin ouvert du lundi au vendredi :
+                8h–12h · 13h30–17h30</span><span>04 76 13 38 25</span></div>
+    </div>
+    <header class="wrap">
+        <div class="headmain"><a class="logo" href="#">R.M.A.<small>MATÉRIELS D'ESPACES VERTS</small></a>
+            <form class="search" id="search"><input id="searchInput"
+                    placeholder="Un produit, une marque, une référence…"><button><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button></form><a
+                class="headlink" href="tel:0476133825">Besoin d'un conseil ?<b>04.76.13.38.25</b></a><a class="iconbtn"
+                href="https://www.rmamateriel.com/connexion"><i class="fa-regular fa-user"></i></a><button class="iconbtn" id="cart"><i class="fa-solid fa-cart-shopping"></i><span class="count"
+                    id="count">0</span></button>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="wrap navrow" id="nav"><button class="navitem active" data-menu="">Accueil</button><button
+                class="navitem" data-menu="neuf">Matériel neuf <i class="fa-solid fa-chevron-down"></i></button><button class="navitem"
+                data-menu="occasion">Matériel d'occasion</button><button class="navitem"
+                data-menu="accessoires">Accessoires <i class="fa-solid fa-chevron-down"></i></button><button class="navitem" data-menu="epi">Vêtements et
+                EPI <i class="fa-solid fa-chevron-down"></i></button><button class="navitem" data-menu="pieces">Pièces détachées</button></div>
+        <div class="mega" id="mega">
+            <div class="wrap megagrid" id="megagrid"></div>
+        </div>
+    </nav>
+    <main>
+        <section class="wrap hero">
+            <div class="sale">
+                <div class="saleleft"><span class="eyebrow">Black Friday · Offre à durée limitée</span>
+                    <h1>Aspire™ R6V :<br><span>−150 €</span></h1>
+                    <p>La performance au jardin, avec une technologie pensée pour simplifier chaque journée.</p><button
+                        class="orange" data-toast="Découvrez les offres RMA">DÉCOUVRIR L'OFFRE ↗</button>
+                </div>
+                <div class="salevisual"><span class="sale-tag">OFFRE EXCLUSIVE</span><img
+                        src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e"
+                        alt="Matériel de jardin"></div>
+            </div>
+            <div class="subhero">
+                <article>
+                    <div class="copy"><span class="eyebrow" style="color:#b6d58b">Performance & liberté</span>
+                        <h2>Solutions pour les journées de travail alimentées par batterie</h2>
+                        <p>Puissance, autonomie et confort pour vos espaces verts.</p>
+                    </div><img
+                        src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=700&q=85"
+                        alt="Équipement de jardin">
+                </article>
+                <article>
+                    <div class="copy"><span class="eyebrow">Le bon équipement</span>
+                        <h2>Alimentation professionnelle par batterie</h2>
+                        <p>Une gamme complète pour travailler autrement.</p>
+                    </div><img
+                        src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=85"
+                        alt="Matériel espaces verts">
+                </article>
+            </div>
+        </section>
+        <div class="wrap servicestrip">
+            <div class="service"><span class="ico"><i class="fa-solid fa-location-dot"></i></span>
+                <div><b>Visiter notre magasin</b><small>À Goncelin</small></div>
+            </div>
+            <div class="service"><span class="ico"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                <div><b>Un atelier de réparation</b><small>Toutes marques</small></div>
+            </div>
+            <div class="service"><span class="ico"><i class="fa-solid fa-robot"></i></span>
+                <div><b>Installation de robots</b><small>Sur devis personnalisé</small></div>
+            </div>
+            <div class="service"><span class="ico"><i class="fa-solid fa-comments"></i></span>
+                <div><b>Des conseils adaptés</b><small>Avant et après votre achat</small></div>
+            </div>
+        </div>
+        <section class="wrap section">
+            <div class="sectionhead">
+                <div><span class="eyebrow">Notre sélection</span>
+                    <h2>Découvrez nos produits</h2>
+                    <p class="subtext">Tout l'équipement pour entretenir vos espaces verts.</p>
+                </div><a class="textlink" href="https://www.rmamateriel.com/2-nos-produits">Tout le matériel ↗</a>
+            </div>
+            <div class="carouselwrap">
+                <button class="carbtn prev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carbtn next" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="catcarousel" id="catcarousel">
+                <a class="cat" href="https://www.rmamateriel.com/39-tondeuses"><img alt="Tondeuses"
+                        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Tondeuses</b><small>Pour une pelouse impeccable</small></div>
+                </a><a class="cat" href="https://www.rmamateriel.com/63-robot-tondeuse"><img
+                        src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Robots tondeuses</b><small>La tonte en toute autonomie</small></div>
+                </a><a class="cat" href="https://www.rmamateriel.com/45-tronconneuses"><img
+                        src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Tronçonneuses</b><small>Puissance et précision</small></div>
+                </a><a class="cat" href="https://www.rmamateriel.com/89-materiels-a-batterie"><img
+                        src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Matériels à batterie</b><small>Liberté de mouvement</small></div>
+                </a><a class="cat" href="#"><img
+                        src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Débroussailleuses</b><small>Pour les terrains exigeants</small></div>
+                </a><a class="cat" href="#"><img
+                        src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=450&q=80">
+                    <div><b>Souffleurs</b><small>Un extérieur impeccable</small></div>
+                </a>
+            </div>
+            <div class="cardots" id="cardots"></div>
+            </div>
+            <div class="categorygrid"><a class="categorytile" href="https://www.rmamateriel.com/36-accessoires"><img alt="Accessoires"
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=350&q=80">
+                    <div><b>Accessoires</b><small>Les indispensables</small></div>
+                </a><a class="categorytile" href="https://www.rmamateriel.com/37-vetements-et-epi"><img
+                        src="https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=350&q=80">
+                    <div><b>Vêtements & EPI</b><small>La protection au travail</small></div>
+                </a><a class="categorytile" href="https://www.rmamateriel.com/35-pieces-detachees"><img
+                        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=350&q=80">
+                    <div><b>Pièces détachées</b><small>Entretenir votre matériel</small></div>
+                </a><a class="categorytile" href="https://www.rmamateriel.com/2-nos-produits"><img
+                        src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=350&q=80">
+                    <div><b>Matériel d'occasion</b><small>Les bonnes opportunités</small></div>
+                </a></div>
+        </section>
+        <section class="wrap section">
+            <div class="sectionhead">
+                <div><span class="eyebrow">Les choix de l'équipe</span>
+                    <h2>Nos suggestions</h2>
+                    <p class="subtext">Une sélection de matériels pour vos projets.</p>
+                </div><a class="textlink" href="https://www.rmamateriel.com/2-nos-produits">Voir toute la sélection
+                    ↗</a>
+            </div>
+            <div class="products" id="products"></div>
+            <div class="pagination" id="pages"></div>
+        </section>
+        <section class="wrap promo">
+            <div><span class="eyebrow">Les bonnes affaires du moment</span>
+                <h2>Les promotions chez RMA MATÉRIEL</h2>
+                <p>Promotions, nouveautés et matériel d'occasion : découvrez les bonnes affaires RMA.</p>
+            </div><a class="orange" href="https://www.rmamateriel.com/2-nos-produits">VOIR LES OFFRES ↗</a>
+        </section>
+        <section class="wrap brands"><span class="eyebrow">Nos partenaires</span>
+            <h2>Les marques que nous aimons</h2>
+            <p class="subtext">Des références reconnues pour leur fiabilité et leurs performances.</p>
+            <div class="brandrow"><span class="brand">Husqvarna</span><span class="brand">ECHO</span><span
+                    class="brand">Cub Cadet</span><span class="brand">PUBERT</span><span class="brand">ROQUES &
+                    LECOEUR</span></div>
+        </section>
+        <section class="wrap about">
+            <div class="aboutphoto"><img
+                    src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Magasin et matériel RMA"></div>
+            <div class="aboutcopy"><span class="eyebrow">Votre spécialiste de proximité</span>
+                <h2>Le bon matériel.<br>Le conseil en plus.</h2>
+                <p>À Goncelin, notre équipe vous accompagne dans le choix, l'entretien et la réparation de votre
+                    matériel d'espaces verts. Un magasin, un atelier et surtout des conseils adaptés à vos besoins.</p>
+                <div class="stats">
+                    <div><b>10+</b><small>Années d'expérience</small></div>
+                    <div><b>100%</b><small>Conseil de proximité</small></div>
+                </div><a class="textlink" href="https://www.rmamateriel.com/nous-contacter">RENCONTRER NOTRE ÉQUIPE
+                    ↗</a>
+            </div>
+        </section>
+        <section class="wrap section">
+            <div class="sectionhead">
+                <div><span class="eyebrow">Nos savoir-faire</span>
+                    <h2>Un magasin, un atelier, des solutions</h2>
+                    <p class="subtext">Un accompagnement complet, du choix de la machine à son entretien.</p>
+                </div><a class="textlink" href="https://www.rmamateriel.com/">Toutes nos prestations ↗</a>
+            </div>
+            <div class="prestations">
+                <article class="presta"><span class="ico"><i class="fa-solid fa-screwdriver-wrench"></i></span><b>Entretien & réparation</b><small>Tondeuses,
+                        tronçonneuses, débroussailleuses : toutes marques.</small><a
+                        href="https://www.rmamateriel.com/">EN SAVOIR PLUS ↗</a></article>
+                <article class="presta"><span class="ico"><i class="fa-solid fa-robot"></i></span><b>Installation de robots</b><small>Un devis adapté à
+                        votre terrain et à votre usage.</small><a href="https://www.rmamateriel.com/">EN SAVOIR PLUS
+                        ↗</a></article>
+                <article class="presta"><span class="ico"><i class="fa-solid fa-truck-pickup"></i></span><b>Location de matériel</b><small>Contactez-nous pour
+                        connaître les machines disponibles.</small><a href="https://www.rmamateriel.com/">EN SAVOIR PLUS
+                        ↗</a></article>
+                <article class="presta"><span class="ico"><i class="fa-solid fa-gear"></i></span><b>Pièces détachées</b><small>Identifiez le bon
+                        équipement et les bonnes références.</small><a href="https://www.rmamateriel.com/">EN SAVOIR
+                        PLUS ↗</a></article>
+                <article class="presta"><span class="ico"><i class="fa-solid fa-bolt"></i></span><b>Flexibles hydrauliques</b><small>Un flexible à
+                        remplacer ? Notre équipe vous renseigne.</small><a href="https://www.rmamateriel.com/">EN SAVOIR
+                        PLUS ↗</a></article>
+            </div>
+        </section>
+        <section class="wrap section">
+            <div class="sectionhead">
+                <div><span class="eyebrow">Le journal RMA</span>
+                    <h2>Actualités & conseils</h2>
+                    <p class="subtext">Des conseils pratiques pour bien choisir et entretenir vos équipements.</p>
+                </div><a class="textlink" href="https://www.rmamateriel.com/blog">Toutes les actualités ↗</a>
+            </div>
+            <div class="newsgrid">
+                <article class="news"><img
+                        src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=700&q=80">
+                    <div class="newsbody"><small>BIEN CHOISIR · CONSEILS</small><b>Souffleur thermique ou à batterie :
+                            lequel choisir ?</b>
+                        <p>Les points à comparer pour votre jardin et vos usages.</p><a class="textlink"
+                            href="https://www.rmamateriel.com/blog">Lire l'article ↗</a>
+                    </div>
+                </article>
+                <article class="news"><img
+                        src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80">
+                    <div class="newsbody"><small>EN MAGASIN · RMA</small><b>À la découverte de notre magasin à
+                            Goncelin</b>
+                        <p>Retrouvez nos équipes et nos équipements en magasin.</p><a class="textlink"
+                            href="https://www.rmamateriel.com/blog">Lire l'article ↗</a>
+                    </div>
+                </article>
+                <article class="news"><img
+                        src="https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=700&q=80">
+                    <div class="newsbody"><small>MATÉRIEL · GUIDE</small><b>Pourquoi choisir un robot tondeuse ?</b>
+                        <p>Découvrez les solutions pour une pelouse entretenue sans effort.</p><a class="textlink"
+                            href="https://www.rmamateriel.com/blog">Lire l'article ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="wrap meet">
+            <div><span class="eyebrow" style="color:#b6d58b">Votre spécialiste de proximité</span>
+                <h2>Rencontrons-nous à Goncelin.</h2>
+                <p>Une machine à choisir, un entretien à prévoir ou un projet professionnel ? Venez échanger avec notre
+                    équipe.</p><a class="orange"
+                    href="https://www.google.com/maps/search/?api=1&query=RMA+Materiel+Goncelin">PRÉPARER MON ITINÉRAIRE
+                    ↗</a>
+            </div>
+            <div class="meetinfo">
+                <div><b>RMA MATÉRIEL</b><small>Villard Bozon<br>38570 Goncelin · France</small></div>
+                <div><b>Contact</b><small>04 76 13 38 25<br>contact@rmamateriel.com</small></div>
+                <div><b>Horaires</b><small>Du lundi au vendredi<br>8h–12h · 13h30–17h30</small></div>
+                <div><b>À votre service</b><small>Conseil, réparation<br>et accompagnement</small></div>
+            </div>
+        </section>
+        <div class="benefits">
+            <div class="wrap benefitrow">
+                <div class="benefit"><i class="fa-solid fa-store"></i><b>Réservez en ligne</b><small>Retirez votre commande en magasin</small>
+                </div>
+                <div class="benefit"><i class="fa-solid fa-truck-fast"></i><b>Livraison</b><small>48H / 72H</small></div>
+                <div class="benefit"><i class="fa-solid fa-credit-card"></i><b>Paiement sécurisé</b><small>CB · Visa · Mastercard · Virement</small>
+                </div>
+                <div class="benefit"><i class="fa-solid fa-headset"></i><b>Service après-vente</b><small>Notre équipe reste à vos côtés</small>
+                </div>
+                <div class="benefit"><i>3×</i><b>Paiement en 3 fois</b><small>Pour faciliter votre équipement</small>
+                </div>
+                <div class="benefit"><i class="fa-regular fa-lightbulb"></i><b>Conseils à l'achat</b><small>Un spécialiste pour vous guider</small>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div class="foothead">
+                <h2>RMA MATÉRIEL</h2>
+                <div class="social"><a href="#">f · Facebook</a><a href="#">◎ · Instagram</a></div>
+            </div>
+            <div class="footgrid">
+                <div>
+                    <h4>Adresse & contact</h4>
+                    <p>RMA MATÉRIEL<br>Villard Bozon<br>38570 Goncelin · France</p><a href="tel:0476133825">04 76 13 38
+                        25</a><a href="mailto:contact@rmamateriel.com">contact@rmamateriel.com</a>
+                    <p>Du lundi au vendredi<br>8h–12h · 13h30–17h30</p>
+                </div>
+                <div>
+                    <h4>Notre entreprise</h4><a href="#">Mentions légales</a><a href="#">Réparation & entretien</a><a
+                        href="#">Préparation et entretien</a><a href="#">Plan du site</a><a href="#">Conditions
+                        générales de vente</a>
+                </div>
+                <div>
+                    <h4>Produits</h4><a href="https://www.rmamateriel.com/2-nos-produits">Matériel neuf</a><a
+                        href="https://www.rmamateriel.com/2-nos-produits">Matériel d'occasion</a><a
+                        href="https://www.rmamateriel.com/36-accessoires">Accessoires</a><a
+                        href="https://www.rmamateriel.com/35-pieces-detachees">Pièces détachées</a><a
+                        href="https://www.rmamateriel.com/37-vetements-et-epi">Vêtements et EPI</a><a
+                        href="#">Promotions</a>
+                </div>
+                <div>
+                    <h4>Mon compte</h4><a href="#">Informations personnelles</a><a href="#">Commandes</a><a
+                        href="#">Avoirs</a><a href="#">Adresses</a>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <p>Les nouveautés, les offres et les conseils de RMA Matériel dans votre boîte mail.</p>
+                    <form id="newsletter"><input type="email" placeholder="Votre adresse e-mail" required><button
+                            class="orange">M'INSCRIRE ↗</button></form>
+                </div>
+            </div>
+            <div class="copyright">© RMA Matériel — Tous droits réservés. Prototype de présentation : contenus, tarifs
+                et visuels à confirmer.</div>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script>
+        (() => {
+            const $ = s => document.querySelector(s), toast = m => {const t = $('#toast'); t.textContent = m; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2200)};
+            const menus = {neuf: [['TONTE', 'Tondeuses', 'Robots tondeuses', 'Tracteurs tondeuses', 'Tondeuses autoportées'], ['COUPE & ENTRETIEN', 'Débroussailleuses', 'Tronçonneuses', 'Coupe-bordures', 'Taille-haies'], ['BATTERIE & SOUFFLAGE', 'Matériels à batterie', 'Batteries et chargeurs', 'Souffleurs', 'Scarificateurs'], ['NOS UNIVERS', 'Matériel professionnel', 'Matériel pour particuliers', 'Voir tout le matériel']], accessoires: [['PAR MACHINE', 'Pour la tronçonneuse', 'Pour la tondeuse', 'Pour les robots tondeuses', 'Pour la débroussailleuse'], ['ÉQUIPEMENT', 'Bidons', 'Harnais', 'Batteries et chargeurs', 'Lames et consommables'], ['ENTRETIEN', 'Huiles et lubrifiants', 'Accessoires de coupe', 'Équipements de protection', 'Tous les accessoires']], epi: [['PROTECTION', 'Casques et visières', 'Lunettes de protection', 'Protections auditives', 'Gants de travail'], ['VÊTEMENTS', 'Vestes de travail', 'Pantalons de travail', 'Chaussures et bottes', 'Vêtements de protection'], ['ÉQUIPEMENT', 'Équipements forestiers', 'Harnais', 'Accessoires de sécurité', 'Tous les EPI']], pieces: [['PAR ÉQUIPEMENT', 'Pièces pour tondeuses', 'Pièces pour tronçonneuses', 'Pièces pour débroussailleuses', 'Pièces pour robots'], ['PIÈCES & COMPOSANTS', 'Lames et chaînes', 'Courroies et filtres', 'Bougies et moteurs', 'Batteries et chargeurs'], ['BESOIN D’AIDE ?', 'Identifier une pièce', 'Conseil en magasin', 'Atelier de réparation', 'Nous contacter']]};
+            const mega = $('#mega'), grid = $('#megagrid'); document.querySelectorAll('[data-menu]').forEach(btn => btn.addEventListener('click', () => {let k = btn.dataset.menu; document.querySelectorAll('.navitem').forEach(x => x.classList.remove('active')); btn.classList.add('active'); if (!k) {mega.classList.remove('open'); return } if (mega.classList.contains('open') && mega.dataset.key === k) {mega.classList.remove('open'); return } mega.dataset.key = k; grid.innerHTML = (menus[k] || [['MATÉRIEL D’OCCASION', 'Machines révisées', 'Occasions disponibles', 'Nous contacter']]).map(c => `<div class="megacol"><h4>${c[0]}</h4>${c.slice(1).map(v => `<a href="https://www.rmamateriel.com/2-nos-produits">${v} <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`).join('')}</div>`).join(''); mega.classList.add('open')})); document.addEventListener('click', e => {if (!e.target.closest('.nav')) mega.classList.remove('open')});
+            const FALLBACK_IMG = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=450&q=80'; document.addEventListener('error', e => {const t = e.target; if (t.tagName === 'IMG' && t.src !== FALLBACK_IMG && !t.dataset.fb) {t.dataset.fb = 1; t.src = FALLBACK_IMG}}, true);
+            (() => {const car = $('#catcarousel'), prev = document.querySelector('.carbtn.prev'), next = document.querySelector('.carbtn.next'), dots = $('#cardots'); const step = () => {const c = car.querySelector('.cat'); return c.offsetWidth + 14}; const pages = () => Math.max(1, Math.ceil((car.scrollWidth - car.clientWidth) / step()) + 1); const cur = () => Math.round(car.scrollLeft / step()); let timer; const buildDots = () => {dots.innerHTML = Array.from({length: pages()}, (_, i) => `<button aria-label="Diapo ${i + 1}" data-i="${i}"></button>`).join(''); update()}; const update = () => {const max = car.scrollWidth - car.clientWidth; prev.disabled = car.scrollLeft <= 2; next.disabled = car.scrollLeft >= max - 2; dots.querySelectorAll('button').forEach((d, i) => d.classList.toggle('on', i === Math.min(cur(), pages() - 1)))}; const go = i => car.scrollTo({left: i * step(), behavior: 'smooth'}); prev.addEventListener('click', () => car.scrollBy({left: -step() * 2, behavior: 'smooth'})); next.addEventListener('click', () => car.scrollBy({left: step() * 2, behavior: 'smooth'})); dots.addEventListener('click', e => {const b = e.target.closest('[data-i]'); if (b) go(+b.dataset.i)}); car.addEventListener('scroll', update, {passive: true}); window.addEventListener('resize', buildDots); const auto = () => {clearInterval(timer); timer = setInterval(() => {const max = car.scrollWidth - car.clientWidth; car.scrollLeft >= max - 2 ? car.scrollTo({left: 0, behavior: 'smooth'}) : car.scrollBy({left: step(), behavior: 'smooth'})}, 4500)}; const wrap = car.parentElement; wrap.addEventListener('mouseenter', () => clearInterval(timer)); wrap.addEventListener('mouseleave', auto); wrap.addEventListener('touchstart', () => clearInterval(timer), {passive: true}); let down = false, sx = 0, sl = 0, moved = false; car.addEventListener('mousedown', e => {down = true; moved = false; sx = e.pageX; sl = car.scrollLeft}); window.addEventListener('mousemove', e => {if (!down) return; const dx = e.pageX - sx; if (Math.abs(dx) > 5) {moved = true; car.classList.add('dragging')} if (moved) car.scrollLeft = sl - dx}); window.addEventListener('mouseup', () => {if (!down) return; down = false; car.classList.remove('dragging'); if (moved) go(cur())}); car.addEventListener('dragstart', e => e.preventDefault()); buildDots(); auto()})();
+            const products = [['Robot tondeuse Husqvarna 305', 'ROBOT TONDEUSE', '799 €', '1 199 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse Husqvarna LB553SQe', 'TONDEUSE', '1 239 €', '1 359 €', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Tronçonneuse Husqvarna T435', 'TRONÇONNEUSE', '469 €', '529 €', 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Débroussailleuse à batterie 535iRX', 'BATTERIE', '629 €', '729 €', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Robot tondeuse Automower 405X', 'ROBOT TONDEUSE', '1 299 €', '1 999 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Souffleur à batterie', 'SOUFFLAGE', '349 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'NOUVEAU'], ['Tronçonneuse Husqvarna 120', 'TRONÇONNEUSE', '149 €', '179 €', 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse autoportée', 'TONTE', '3 490 €', '', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Taille-haies à batterie', 'BATTERIE', '289 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Robot tondeuse professionnel', 'ROBOT TONDEUSE', '2 900 €', '4 799 €', 'https://images.unsplash.com/photo-1599685315640-6ec5c2b0a3a7?auto=format&fit=crop&w=500&q=80', 'PROMO'], ['Tondeuse thermique', 'TONDEUSE', '579 €', '', 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=500&q=80', 'SÉLECTION'], ['Accessoires de jardin', 'ACCESSOIRES', '39 €', '', 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=500&q=80', 'SÉLECTION']]; let page = 1, count = 0; function render() {let list = $('#products'); list.innerHTML = products.slice((page - 1) * 8, page * 8).map(p => `<article class="product"><div class="productimg"><span class="tag">${p[5]}</span><button class="heart" aria-label="Favori"><i class="fa-regular fa-heart"></i></button><img src="${p[4]}" alt="${p[0]}"></div><div class="productinfo"><small>${p[1]}</small><b>${p[0]}</b><p>Disponible selon arrivage · Conseil en magasin</p><span class="price">${p[2]} ${p[3] ? `<del>${p[3]}</del>` : ''}</span><button class="add" data-add>AJOUTER AU PANIER +</button></div></article>`).join(''); $('#pages').innerHTML = Array.from({length: Math.ceil(products.length / 8)}, (_, i) => `<button class="${page === i + 1 ? 'sel' : ''}" data-page="${i + 1}">${i + 1}</button>`).join('') + `<button data-page="${page === Math.ceil(products.length / 8) ? 1 : page + 1}"><i class="fa-solid fa-arrow-right"></i></button>`} render(); $('#pages').addEventListener('click', e => {let b = e.target.closest('[data-page]'); if (b) {page = +b.dataset.page; render(); $('#products').scrollIntoView({behavior: 'smooth', block: 'center'})} }); $('#products').addEventListener('click', e => {if (e.target.closest('[data-add]')) {count++; $('#count').textContent = count; toast('Produit ajouté au panier (démo)')} let h = e.target.closest('.heart'); if (h) {let ic = h.querySelector('i'); ic.classList.toggle('fa-regular'); ic.classList.toggle('fa-solid'); h.style.color = '#df4c27'} }); $('#cart').addEventListener('click', () => toast('Votre panier contient ' + count + ' article(s) — démonstration')); $('#search').addEventListener('submit', e => {e.preventDefault(); toast($('#searchInput').value.trim() ? 'Recherche : ' + $('#searchInput').value : 'Saisissez un produit ou une référence')}); $('#newsletter').addEventListener('submit', e => {e.preventDefault(); toast('Merci pour votre inscription (démo)')}); document.querySelectorAll('[data-toast]').forEach(b => b.addEventListener('click', () => toast(b.dataset.toast)));
+        })();
+    </script>
+</body>
+
+</html>
