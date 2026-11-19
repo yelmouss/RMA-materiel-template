@@ -27,9 +27,12 @@
     <nav class="nav">
         <div class="wrap navrow" id="nav"><button class="navitem active" data-menu="">Accueil</button><button
                 class="navitem" data-menu="neuf">Matériel neuf <i class="fa-solid fa-chevron-down"></i></button><button class="navitem"
-                data-menu="occasion">Matériel d'occasion</button><button class="navitem"
+                data-menu="occasion">Matériel d'occasion <i class="fa-solid fa-chevron-down"></i></button><button class="navitem"
                 data-menu="accessoires">Accessoires <i class="fa-solid fa-chevron-down"></i></button><button class="navitem" data-menu="epi">Vêtements et
-                EPI <i class="fa-solid fa-chevron-down"></i></button><button class="navitem" data-menu="pieces">Pièces détachées</button></div>
+                EPI <i class="fa-solid fa-chevron-down"></i></button><button class="navitem" data-menu="pieces">Pièces détachées</button><a
+                class="navitem navitem-promo" href="#promotions" data-menu="">Promotions</a><a
+                class="navitem" href="#location" data-menu="">Location</a><a
+                class="navitem" href="#contact" data-menu="">Contact</a></div>
         <div class="mega" id="mega">
             <div class="wrap megagrid" id="megagrid"></div>
         </div>
@@ -137,7 +140,7 @@
             <div class="products" id="products"></div>
             <div class="pagination" id="pages"></div>
         </section>
-        <section class="wrap promo">
+        <section class="wrap promo" id="promotions">
             <div><span class="eyebrow">Les bonnes affaires du moment</span>
                 <h2>Les promotions chez RMA MATÉRIEL</h2>
                 <p>Promotions, nouveautés et matériel d'occasion : découvrez les bonnes affaires RMA.</p>
@@ -190,7 +193,7 @@
                 <article class="presta"><span class="ico"><i class="fa-solid fa-robot"></i></span><b>Installation de robots</b><small>Un devis adapté à
                         votre terrain et à votre usage.</small><a href="https://www.rmamateriel.com/">EN SAVOIR PLUS
                         ↗</a></article>
-                <article class="presta"><span class="ico"><i class="fa-solid fa-truck-pickup"></i></span><b>Location de matériel</b><small>Contactez-nous pour
+                <article class="presta" id="location"><span class="ico"><i class="fa-solid fa-truck-pickup"></i></span><b>Location de matériel</b><small>Contactez-nous pour
                         connaître les machines disponibles.</small><a href="https://www.rmamateriel.com/">EN SAVOIR PLUS
                         ↗</a></article>
                 <article class="presta"><span class="ico"><i class="fa-solid fa-gear"></i></span><b>Pièces détachées</b><small>Identifiez le bon
@@ -234,7 +237,7 @@
                 </article>
             </div>
         </section>
-        <section class="wrap meet">
+        <section class="wrap meet" id="contact">
             <div><span class="eyebrow" style="color:#b6d58b">Votre spécialiste de proximité</span>
                 <h2>Rencontrons-nous à Goncelin.</h2>
                 <p>Une machine à choisir, un entretien à prévoir ou un projet professionnel ? Venez échanger avec notre
@@ -310,7 +313,7 @@
     <script>
         (() => {
             const $ = s => document.querySelector(s), toast = m => {const t = $('#toast'); t.textContent = m; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2200)};
-            const menus = {neuf: ['Tondeuses', 'Robots tondeuses', 'Tracteurs tondeuses', 'Tondeuses autoportées', 'Débroussailleuses', 'Tronçonneuses', 'Coupe-bordures', 'Taille-haies', 'Matériels à batterie', 'Batteries et chargeurs', 'Souffleurs', 'Scarificateurs', 'Matériel professionnel', 'Matériel pour particuliers'], accessoires: ['Pour la tronçonneuse', 'Pour la tondeuse', 'Pour les robots tondeuses', 'Pour la débroussailleuse', 'Bidons', 'Harnais', 'Batteries et chargeurs', 'Lames et consommables', 'Huiles et lubrifiants', 'Accessoires de coupe', 'Équipements de protection', 'Tous les accessoires'], epi: ['Casques et visières', 'Lunettes de protection', 'Protections auditives', 'Gants de travail', 'Vestes de travail', 'Pantalons de travail', 'Chaussures et bottes', 'Vêtements de protection', 'Équipements forestiers', 'Harnais', 'Accessoires de sécurité', 'Tous les EPI'], pieces: ['Pièces pour tondeuses', 'Pièces pour tronçonneuses', 'Pièces pour débroussailleuses', 'Pièces pour robots', 'Lames et chaînes', 'Courroies et filtres', 'Bougies et moteurs', 'Batteries et chargeurs', 'Identifier une pièce', 'Conseil en magasin', 'Atelier de réparation', 'Nous contacter']};
+            const menus = {neuf: ['Tondeuses', 'Robots tondeuses', 'Tracteurs tondeuses', 'Tondeuses autoportées', 'Débroussailleuses', 'Tronçonneuses', 'Coupe-bordures', 'Taille-haies', 'Matériels à batterie', 'Batteries et chargeurs', 'Souffleurs', 'Scarificateurs', 'Matériel professionnel', 'Matériel pour particuliers'], occasion: ['Toutes nos occasions', 'Tondeuses d\'occasion', 'Tracteurs & autoportées', 'Robots tondeuses occasion', 'Tronçonneuses & débroussailleuses', 'Matériel révisé garanti'], accessoires: ['Pour la tronçonneuse', 'Pour la tondeuse', 'Pour les robots tondeuses', 'Pour la débroussailleuse', 'Bidons', 'Harnais', 'Batteries et chargeurs', 'Lames et consommables', 'Huiles et lubrifiants', 'Accessoires de coupe', 'Équipements de protection', 'Tous les accessoires'], epi: ['Casques et visières', 'Lunettes de protection', 'Protections auditives', 'Gants de travail', 'Vestes de travail', 'Pantalons de travail', 'Chaussures et bottes', 'Vêtements de protection', 'Équipements forestiers', 'Harnais', 'Accessoires de sécurité', 'Tous les EPI'], pieces: ['Pièces pour tondeuses', 'Pièces pour tronçonneuses', 'Pièces pour débroussailleuses', 'Pièces pour robots', 'Lames et chaînes', 'Courroies et filtres', 'Bougies et moteurs', 'Batteries et chargeurs', 'Identifier une pièce', 'Conseil en magasin', 'Atelier de réparation', 'Nous contacter']};
             const mega = $('#mega'), grid = $('#megagrid'); document.querySelectorAll('[data-menu]').forEach(btn => btn.addEventListener('click', () => {let k = btn.dataset.menu; document.querySelectorAll('.navitem').forEach(x => x.classList.remove('active')); btn.classList.add('active'); if (!k) {mega.classList.remove('open'); return } if (mega.classList.contains('open') && mega.dataset.key === k) {mega.classList.remove('open'); return } mega.dataset.key = k; let items = menus[k] || []; let colCount = Math.ceil(items.length / 3); let cols = Array.from({length: Math.min(4, colCount)}, () => []); items.forEach((item, i) => cols[i % cols.length].push(item)); grid.innerHTML = cols.map(c => `<div class="megacol">${c.map(v => `<a href="https://www.rmamateriel.com/2-nos-produits">${v}</a>`).join('')}</div>`).join(''); mega.classList.add('open')})); document.addEventListener('click', e => {if (!e.target.closest('.nav')) mega.classList.remove('open')});
             (() => {const nav = document.querySelector('.nav'), top = nav.offsetTop; let tick = false; const onScroll = () => {const y = window.scrollY; nav.classList.toggle('stuck', y > top + 4); const h = document.documentElement.scrollHeight - innerHeight; nav.style.setProperty('--progress', (h > 0 ? y / h * 100 : 0) + '%'); tick = false}; addEventListener('scroll', () => {if (!tick) {tick = true; requestAnimationFrame(onScroll)}}, {passive: true}); onScroll()})();
             const FALLBACK_IMG = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=450&q=80'; document.addEventListener('error', e => {const t = e.target; if (t.tagName === 'IMG' && t.src !== FALLBACK_IMG && !t.dataset.fb) {t.dataset.fb = 1; t.src = FALLBACK_IMG}}, true);

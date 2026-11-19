@@ -24,6 +24,12 @@
             zoom: 1.25
         }
 
+        @media (max-width: 768px) {
+            body {
+                zoom: 1
+            }
+        }
+
         a {
             color: inherit;
             text-decoration: none
@@ -196,18 +202,31 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 5px
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none
+        }
+
+        .navrow::-webkit-scrollbar {
+            display: none
         }
 
         .navitem {
             border: 0;
             background: transparent;
-            padding: 16px 12px;
+            padding: 16px 10px;
             color: #273f30;
             font-size: 12px;
             font-weight: 700;
             white-space: nowrap;
-            transition: padding .3s ease, color .2s ease
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            transition: padding .3s ease, color .2s ease;
+            flex-shrink: 0
         }
 
         .nav.stuck .navitem {
@@ -217,6 +236,21 @@
         .navitem:hover,
         .navitem.active {
             color: var(--green2)
+        }
+
+        .navitem.navitem-promo {
+            color: var(--orange);
+            font-weight: 800
+        }
+
+        .navitem.navitem-promo:hover {
+            color: #b53818
+        }
+
+        #promotions,
+        #location,
+        #contact {
+            scroll-margin-top: 80px
         }
 
         .mega {
